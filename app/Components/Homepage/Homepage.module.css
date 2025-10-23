@@ -1,10 +1,10 @@
 .chat{
-    @apply px-5 py-3 rounded-2xl bg-muted mb-4 max-w-[75vw] text-wrap mx-auto;
+    @apply px-5 py-3 rounded-2xl bg-muted mb-4 max-w-[75vw] text-wrap ;
     animation: chatPop 0.4s ease-out;
     animation: chatSlideIn 0.4s ease-in-out;
 }
 .skeletonChat{
-    @apply flex flex-col items-start space-y-2 px-5 py-3 rounded-2xl bg-muted mb-4 w-[75vw] justify-start mx-auto;
+    @apply flex flex-col items-start space-y-2 px-5 py-3 rounded-2xl bg-muted mb-4 w-[75vw] justify-start;
     animation: chatPop 0.4s ease-out;
     animation: chatSlideIn 0.4s ease-in-out;
 }
@@ -15,15 +15,15 @@
     @apply h-4 w-[80%];
 }
 .inputs{
-    @apply mb-4 flex justify-center;
+    @apply mb-4;
     animation: inputNbtn 0.5s ease-in;
 }
 .submitbtn{
-    @apply mb-4 flex justify-center;
+    @apply mb-4;
     animation: inputNbtn 0.5s ease-in;
 }
 .bfpInput{
-    @apply mb-4 w-fit mx-auto;
+    @apply mb-4 w-fit;
     animation: inputNbtn 0.5s ease-in;
 }
 .ToggleGroup{
