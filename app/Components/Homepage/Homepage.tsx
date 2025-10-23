@@ -112,7 +112,7 @@ const Homepage = () => {
   };
 
   const promptSend = async (promptText: string, type: "workout" | "diet") => {
-    const response = await fetch("/api/gemini", {
+    const response = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: promptText }),
