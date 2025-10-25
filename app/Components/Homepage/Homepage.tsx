@@ -111,16 +111,31 @@ const Homepage = () => {
     );
   };
 
-  const promptSend = async (promptText: string, type: "workout" | "diet") => {
+const promptSend = async (promptText: string, type: "workout" | "diet") => {
     const response = await fetch("/api/gemini", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: promptText }),
     });
+
     const data = await response.json();
 
-    // setAiResp(data.text);
-    // type==="workout" ? setAiWoResp(data.text) : type==="diet" ? setAiDietResp(data.text) : null;
+    // --- THIS IS THE FIX ---
+    // Check if the server sent an error back
+    if (data.error) {
+      console.error("Error from API:", data.details);
+      const errorMsg = "Sorry, I ran into an error. Please make sure your GOOGLE_API_KEY is set up correctly and try again.";
+      
+      if (type === "workout") {
+        setAiWoResp(errorMsg);
+      } else if (type === "diet") {
+        setAiDietResp(errorMsg);
+      }
+      return data;
+    }
+    // --- END OF FIX ---
+
+    // This part will only run if there was NO error
     if (type === "workout") {
       setAiWoResp(data.text);
     } else if (type === "diet") {
