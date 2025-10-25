@@ -235,7 +235,7 @@ const Homepage = () => {
         {chatTracker.nameEntered && (
           <div className="flex flex-col justify-end items-end">
             <div className={styles.chat}>
-              Hi {details.name}, Lets get you in the best shape of your life!
+                 Hi {details.name}, Let&apos;s get you in the best shape of your life!
             </div>
             <div className="flex flex-col justify-end items-end">
               <div className={styles.chat}>Tell me about yourself</div>
@@ -283,7 +283,7 @@ const Homepage = () => {
             {chatTracker.ageAndGenderEntered && (
               <div className="flex flex-col justify-end items-end">
                 <div className={styles.chat}>
-                  Alright, now lets calculate you body Fat percentage
+                  Alright, now let&apos;s calculate you body Fat percentage
                 </div>
                 <div className="flex flex-col justify-end items-end">
                   <Input
