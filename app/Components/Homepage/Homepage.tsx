@@ -220,12 +220,12 @@ const promptSend = async (promptText: string, type: "workout" | "diet") => {
     <div className="p-10 sm:text-sm sm:p-6">
       <div className="flex flex-col justify-center items-center w-full">
         <h1 className="text-5xl my-7 text-center">
-          Welcome to Gul's Fitness club<span className="bg-muted rounded-xl px-2">Ai</span>!
+          Welcome to Gul's <span className="bg-muted rounded-xl px-2">Fitness Club</span>!
         </h1>
         <div>One Place For All Your Fitness Needs.</div>
       </div>
       <div className="flex flex-col justify-end items-end w-full h-full mt-14">
-        <div className={styles.chat}>Hello, What is your name?</div>
+        <div className={styles.chat}>Merhaba Dear, What is your good name?</div>
         <div className="flex flex-col justify-end items-end">
           <Input
             autoComplete="off"
@@ -250,7 +250,7 @@ const promptSend = async (promptText: string, type: "workout" | "diet") => {
         {chatTracker.nameEntered && (
           <div className="flex flex-col justify-end items-end">
             <div className={styles.chat}>
-                 Hi {details.name}, Let&apos;s get you in the best shape of your life!
+                 Merhaba {details.name}, Let&apos;s get you in the best shape of your life!
             </div>
             <div className="flex flex-col justify-end items-end">
               <div className={styles.chat}>Tell me about yourself</div>
@@ -398,7 +398,7 @@ const promptSend = async (promptText: string, type: "workout" | "diet") => {
                       value="Toned Muscles"
                       onClick={() => setFitnessGoals("Toned Muscles")}
                     >
-                      Toned Muscles
+                      Toned Body
                     </ToggleGroupItem>
                   </ToggleGroup>
                   <Button
