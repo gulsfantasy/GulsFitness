@@ -564,7 +564,7 @@ const promptSend = async (promptText: string, type: "workout" | "diet") => {
       {typeof aiDietResp === "string" && (
         <div className="flex flex-col justify-center items-center w-full">
           <div className="text-5xl my-7">Thank You!</div>
-          <div>Created By Rahil.</div>
+          <div>Created By Gul's Fantasy.</div>
         </div>
       )}
     </div>
