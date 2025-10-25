@@ -10,7 +10,9 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  // This is the only one you need.
+  // It automatically includes all the rules for Next.js, React, and TypeScript.
+  ...compat.extends("next/core-web-vitals"),
 ];
 
 export default eslintConfig;

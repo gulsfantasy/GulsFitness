@@ -6,6 +6,8 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    // 1. ADD THIS LINE TO LOAD YOUR CUSTOM CSS:
+    "./app/Components/Homepage/Homepage.module.css", 
   ],
   theme: {
   	extend: {
@@ -58,7 +60,6 @@ export default {
   		}
   	}
   },
-//   plugins: [require("tailwindcss-animate")],
-	plugins:[],
+  // 2. FIX THIS LINE TO ENABLE ANIMATIONS:
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
- 
