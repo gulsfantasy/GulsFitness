@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // 1. Import Viewport here
 import { Geist, Geist_Mono } from "next/font/google";
-import  './globals.css'
-// 1. REMOVE THIS IMPORT:
-// import Head from "next/head"; 
+import './globals.css'
 import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
@@ -15,11 +13,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// 2. Your metadata object (WITHOUT viewport)
 export const metadata: Metadata = {
   title: "Fit Ai",
   description: "Creates a workout and diet plan tailored to the user's needs.",
-  // 2. ADD VIEWPORT HERE INSTEAD OF <Head>:
-  viewport: "width=device-width, initial-scale=1",
+};
+
+// 3. Your new, separate viewport export
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -29,7 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      {/* 3. REMOVE THE <Head> ... </Head> TAGS FROM HERE */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
