@@ -488,9 +488,9 @@ const Homepage = () => {
                     // e.g., "Halal Non-Vegetarian", "Vegeterian"
 
                     if (diet === "Halal Non-Vegetarian") {
-                      dietPrompt = `Hi I am a ${details.age} year old ${gender} with ${details.weight} kg weight and ${details.height} inches height and ${bodyFatPercentage}% body Fat percentage I aim to have ${fitnessGoals}. 
+                      dietPrompt = `Hi I am a ${details.age} year old ${gender} with ${details.weight} kg weight and ${details.height} inches height and ${bodyFatPercentage}% body Fat percentage I aim to have ${fitnessGoals}
 Create a weekly **strictly halal** non-vegetarian diet plan for me. 
-This plan **MUST NOT** include any pork, pig products, bacon, ham, or any dishes containing alcohol.
+This plan **MUST NOT** include any pork, pig products, bacon, ham, or any dishes containing alcohol ${diet}.
 Reply very concisely with only the diet plan and absolutely nothing else. The plan should be in clear and in detail. No extra sentences or information just the diet plan.`;
                     } else {
                       // This will cover "Vegeterian" and "Eggeterian"
