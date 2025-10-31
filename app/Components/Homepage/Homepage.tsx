@@ -566,11 +566,6 @@ const promptSend = async (promptText: string, type: "workout" | "diet") => {
         <div className="flex flex-col justify-center items-center w-full">
           <div className="text-5xl my-7">Thank You!</div>
           <div>Created By Gul's Fantasy.</div>
-          </div> <div class="page-bottom-counter">
-        <a href='http://www.freevisitorcounters.com'>free visitor counters</a> 
-        <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=6a90fd511d85a5065fc6e135b2579f8964c9fc3e'></script>
-        <script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/1427915/t/13"></script>
-        </div>
         </div>
       )}
     </div>
